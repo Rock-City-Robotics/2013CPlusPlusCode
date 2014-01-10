@@ -33,9 +33,11 @@ void RobotMap::init() {
 	fireFireController = new Jaguar(1, 5);
 	lw->AddActuator("Fire", "FireController", (Jaguar*) fireFireController);
 	
+	// Here is the drive motor for the left side
 	driveTrainLeftMotor = new Victor(1, 1);
 	lw->AddActuator("DriveTrain", "LeftMotor", (Victor*) driveTrainLeftMotor);
 	
+	// and here for the right side
 	driveTrainRightMotor = new Victor(1, 2);
 	lw->AddActuator("DriveTrain", "RightMotor", (Victor*) driveTrainRightMotor);
 	
